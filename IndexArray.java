@@ -7,12 +7,12 @@ public class IndexArray {
 	public static void indexarray(int[] arr) {
 		int count = 0,key = 0,value = 0;
 		for(int i = 0;i<arr.length;i++) {
-			for(int j = 0;j<arr.length-1;j++) {
-				if(arr[j+1]>arr[i]) {
-					if(arr[i] == (arr[j+1] + 1) || arr[j+1] == (arr[i] + 1) ){
+			for(int j = 1;j<arr.length;j++) {
+				if(arr[j]>arr[i]) {
+					if(arr[i] == (arr[j] + 1) || arr[j] == (arr[i] + 1) ){
 						
-				         key = i;
-				         value = j+1;
+				         key = arr[i];
+				         value = arr[j];
 				         System.out.println("number of similary pairs possible ("+key+","+value+")");
 							count++;
 						}
